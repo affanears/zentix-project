@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Zentix</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* KHUSUS TEST PAGE */
+    .test-card {
+      max-height: 80vh;
+      overflow-y: auto;
+      padding-right: 10px;
+      animation: fadeIn 1s ease;
+    }
+
+    .test-card label {
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .test-card textarea {
+      width: 100%;
+      min-height: 90px;
+      margin: 8px 0 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      resize: vertical;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .test-card textarea:focus {
+      border-color: #E67E22;
+      outline: none;
+      box-shadow: 0 0 5px rgba(230,126,34,0.5);
+    }
+
+    .test-card textarea:hover {
+      border-color: #E67E22;
+    }
+
+    /* Scrollbar */
+    .test-card::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .test-card::-webkit-scrollbar-thumb {
+      background: #E67E22;
+      border-radius: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="main">
+
+  <!-- LEFT -->
+  <div class="left">
+    <img src="logo.png" class="logo">
+    <h1>ZENTIX</h1>
+    <p>Jawab dengan jujur untuk hasil terbaik</p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <form id="testForm" class="card test-card">
+
+      <h2>Soal Tes</h2>
+
+      <!-- SOAL 1 -->
+      <label>1. Ceritakan siapa dirimu (5–10 kalimat, tanpa identitas formal)</label>
+      <textarea id="q1" required></textarea>
+
+      <!-- SOAL 2 -->
+      <label>2. Deskripsikan hari terburukmu dan bagaimana kamu menghadapinya</label>
+      <textarea id="q2" required></textarea>
+
+      <!-- SOAL 3 -->
+      <label>3. Bayangkan kamu masuk ke ruangan kosong, jelaskan isi ruangan itu</label>
+      <textarea id="q3" required></textarea>
+
+      <!-- SOAL 4 -->
+      <label>4. Jelaskan seperti apa teman idealmu</label>
+      <textarea id="q4" required></textarea>
+
+      <!-- SOAL 5 -->
+      <label>5. Jika kamu menjadi pemimpin, bagaimana cara kamu memimpin?</label>
+      <textarea id="q5" required></textarea>
+
+      <!-- SOAL 6 -->
+      <label>6. Bagaimana reaksi kamu saat dikritik?</label>
+      <textarea id="q6" required></textarea>
+
+      <!-- SOAL 7 -->
+      <label>7. Apa impian terbesar dalam hidupmu dan alasannya?</label>
+      <textarea id="q7" required></textarea>
+
+      <!-- SOAL 8 -->
+      <label>8. Apa yang kamu lakukan saat punya waktu kosong?</label>
+      <textarea id="q8" required></textarea>
+
+      <!-- SOAL 9 -->
+      <label>9. Ceritakan masalah terakhir yang kamu hadapi dan solusinya</label>
+      <textarea id="q9" required></textarea>
+
+      <!-- SOAL 10 -->
+      <label>10. Menurutmu, bagaimana orang lain melihat dirimu?</label>
+      <textarea id="q10" required></textarea>
+
+      <button type="submit">Kirim Jawaban</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- JS -->
+<script src="test.js"></script>
+
+</body>
+</html>
