@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 🔐 SUPABASE CONFIG
   // ============================
   const SUPABASE_URL = "https://xwzlsxvbnsumhuurfppj.supabase.co";
-  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh3emxzeHZibnN1bWh1dXJmcHBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzNTAzODMsImV4cCI6MjA4OTkyNjM4M30.DPS3aaH3fkcyzFD5U6whIRpiB2KLF4NucLEGPHFLAB0"; // biarkan seperti sebelumnya
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh3emxzeHZibnN1bWh1dXJmcHBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQzNTAzODMsImV4cCI6MjA4OTkyNjM4M30.DPS3aaH3fkcyzFD5U6whIRpiB2KLF4NucLEGPHFLAB0";
 
   const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
@@ -86,34 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("✅ DATA MASUK DATABASE");
 
       // ============================
-      // 🚀 KIRIM KE AI + EMAIL
-      // ============================
-      const res = await fetch(
-        "https://xwzlsxvbnsumhuurfppj.supabase.co/functions/v1/analyze-and-send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            email: email,
-            answers: answers
-          })
-        }
-      );
-
-      const result = await res.json();
-
-      console.log("🤖 RESPONSE FUNCTION:", result);
-
-      if (!res.ok) {
-        console.error("❌ FUNCTION ERROR:", result);
-        alert("Gagal mengirim ke AI");
-        return;
-      }
-
-      // ============================
-      // 🎉 REDIRECT
+      // 🎉 LANGSUNG SELESAI (FETCH DIHAPUS)
       // ============================
       window.location.href = "finish.html";
 
